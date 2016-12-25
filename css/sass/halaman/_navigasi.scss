@@ -1,0 +1,60 @@
+// NAVIGASI
+nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 90;
+	height: auto;
+	padding:10px 10%;
+	margin:0;
+	@include transition(all 200ms ease);
+	@include flexku(row,center,space-between);
+	.logo{
+		img{
+			width:80px;
+			@include filter(brightness(80%) opacity(0.8));
+			@include transition(all 200ms ease);
+			&:hover{
+				@include filter(brightness(100%) opacity(1));
+			}
+		}
+	}
+	.menu{
+		ul{
+			list-style:none;
+			margin:0;
+			@include flexku(row,center,center);
+			li{
+				a{
+					display:inline-block;
+					color:transparentize(white, 0.2);
+					font-family:$font-1;
+					padding:15px 20px;
+					font-size:1.2em;
+					text-decoration:none;
+					position: relative;
+					text-transform:uppercase;
+					opacity:0.8;
+					@include transition(all 150ms ease);
+					&:before,&:after{
+						position: absolute;
+						bottom: 0;
+						height: 2px;
+						width: 0;
+						content:"";
+						background:white;
+						@include transition(all 150ms ease);
+					}
+					&:before{ left:50%; }
+					&:after{ right: 50%; }
+					&:hover{
+						opacity:1;
+						color:transparentize(white, 0);
+						&:before,&:after{ width:15%; }
+					}
+				}
+			}
+		}
+	}
+}

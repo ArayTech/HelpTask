@@ -1,0 +1,14 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "font-awesome/font-awesome";
+
+// VARS
+@import "vars/warna";
+@import "vars/typography";
+@import "vars/mixin";
+
+// KOMPONEN
+@import "halaman/navigasi";
+
+// HALAMAN
+@import "halaman/home";

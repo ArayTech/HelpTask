@@ -1,0 +1,10 @@
+@mixin flexku($arah,$ai,$jc){
+	display:flex;
+	-webkit-flex-direction: $arah;
+	    -ms-flex-direction: $arah;
+	        flex-direction: $arah;
+	-webkit-align-items: $ai;
+	        align-items: $ai;
+	-webkit-justify-content: $jc;
+	        justify-content: $jc;
+}
